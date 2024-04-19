@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://hallinta.vtjkysely.vrk.fi/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://hallinta.vtjkysely.vrk.fi/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://hallinta.vtjkysely.vrk.fi/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HaeKayttajanKayttoOikeusSoSo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOhjelma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusSoSoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HaeKayttajanKayttoOikeusSoSoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusSoSo_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOhjelma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sViranomaisKoodi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusSoSo_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HaeKayttajanKayttoOikeusSoSo_v2Result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusYP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusYPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusYPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusYP_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusYP_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusYP_v2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusMuuviYP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusMuuviYPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusMuuviYPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusMuuviYP_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusMuuviYP_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusMuuviYP_v2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanRoolinOikeusuRahuYP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaRooliId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanRoolinOikeusuRahuYPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanRoolinOikeusuRahuYPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusuRahuYP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusuRahuYPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusuRahuYPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusuRahuYP_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusuRahuYP_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusuRahuYP_v2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusKRHypSoSo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusKRHypSoSoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusKRHypSoSoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusKRHypSoSo_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusKRHypSoSo_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusKRHypSoSo_v2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusRRASoSo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOhjelma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusRRASoSoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusRRASoSoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusHRyp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaTunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanKayttoOikeusHRypResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanKayttoOikeusHRypResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanRoolinOikeusHRyp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajaRooliId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanRoolinOikeusHRypResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanRoolinOikeusHRypResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanTiedotADsta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajatunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanTiedotADstaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanTiedotADstaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanTiedotADsta_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajatunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanTiedotADsta_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanTiedotADsta_v2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanPerustiedot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajatunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanPerustiedotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanPerustiedotResult" type="tns:KayttajanPerustiedot" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="KayttajanPerustiedot">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="KayttajaId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADObjectGUID" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Etunimi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sukunimi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kieli" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnsisijainenRooliId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnMontaRoolia" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrganisaatioId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrganisaatioNimi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AsiakasRyhma" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RooliOtsikko" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RooliId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoolinTunnus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HenkiloTunnus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KayttajaTunnus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Turvakielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="Suoramarkkinointikielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="Osoitepalvelukielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sukututkimuskielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="Henkilomatrikkelikielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="Yhteystietokielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="Asiakasrekisterikielto" type="tns:Nayttotasot" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalasanaVaihdettava" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="KayttoehdotHyvaksytty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SahkoPosti" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TurvaKysymys" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TurvaVastaus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoolinTyyppi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalasanaVanhenee" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EdellinenSisaankirjaus" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ViimeinenEpaonnistunutSisaankirjaus" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnkoLukittu" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Korttikirjaus" type="tns:KorttikirjausTila" />
+          <s:element minOccurs="0" maxOccurs="1" name="KayttajanTilaKoodi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnTekninenKayttaja" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PuhelinpalveluTunnus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HetunMaaKoodi" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Nayttotasot">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotInUse_Nayttotaso0" />
+          <s:enumeration value="Nayttotaso1" />
+          <s:enumeration value="Nayttotaso2" />
+          <s:enumeration value="Nayttotaso3" />
+          <s:enumeration value="Nayttotaso4" />
+          <s:enumeration value="Nayttotaso5" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="KorttikirjausTila">
+        <s:restriction base="s:string">
+          <s:enumeration value="EiKaytossa" />
+          <s:enumeration value="Mahdollinen" />
+          <s:enumeration value="Kaytossa" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="HaeKayttajanPerustiedot_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sovellusId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKayttajatunnus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeKayttajanPerustiedot_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeKayttajanPerustiedot_v2Result" type="tns:KayttajanPerustiedot" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TarkistaSalasanaTilaus2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_kayttajaTunnus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_etuNimi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sukuNimi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_eMail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TarkistaSalasanaTilaus2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TarkistaSalasanaTilaus2Result" nillable="true" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TarkistaSalasanaTilaus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_kayttajaTunnus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_etuNimi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sukuNimi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_eMail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TarkistaSalasanaTilausResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TarkistaSalasanaTilausResult" type="tns:KayttajanPerustiedot" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeTurvakysymysJaVastaus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_kayttajaId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeTurvakysymysJaVastausResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeTurvakysymysJaVastausResult" type="tns:KayttajanPerustiedot" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LisaaSalasanaTilaus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salasananTilaus" type="tns:SalasananTilaus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SalasananTilaus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Salasanatilaus_id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="KayttajaId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="UUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UUID_tila" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LisattyPvm" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lisaaja" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MuokattuPvm" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Muokkaaja" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Voimassaoloaika" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Virhe" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LisaaSalasanaTilausResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LisaaSalasanaTilausResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaVahvistus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_kayttajaId" nillable="true" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="_uuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaVahvistusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HaeSalasanaVahvistusResult" type="tns:SalasananTilaus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaivitaSalasanaVahvistus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salasananTilaus" type="tns:SalasananTilaus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaivitaSalasanaVahvistusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PaivitaSalasanaVahvistusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaTilausLukumaara">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_kayttajaId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaTilausLukumaaraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HaeSalasanaTilausLukumaaraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaTilausLukumaaraAikaRajauksella">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_kayttajaId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="_lisattyPvm" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaTilausLukumaaraAikaRajauksellaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HaeSalasanaTilausLukumaaraAikaRajauksellaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaTilausSamaIPPyyntoLKM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_IP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_lisattyPvm" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HaeSalasanaTilausSamaIPPyyntoLKMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HaeSalasanaTilausSamaIPPyyntoLKMResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LisaaTodistuksenTiedot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="todistuksenTiedot" type="tns:TodistuksenTiedot" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TodistuksenTiedot">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Todistus_id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tuote_id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Luovutusaika" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tiiviste" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Henkilotunnus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TallennettuPvm" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tallentaja" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LisaaTodistuksenTiedotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LisaaTodistuksenTiedotResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HaeKayttajanKayttoOikeusSoSoSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusSoSo" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusSoSoSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusSoSoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusSoSo_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusSoSo_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusSoSo_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusSoSo_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusYPSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusYP" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusYPSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusYPResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusYP_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusYP_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusYP_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusYP_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusMuuviYPSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusMuuviYP" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusMuuviYPSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusMuuviYPResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusMuuviYP_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusMuuviYP_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusMuuviYP_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusMuuviYP_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanRoolinOikeusuRahuYPSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanRoolinOikeusuRahuYP" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanRoolinOikeusuRahuYPSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanRoolinOikeusuRahuYPResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusuRahuYPSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusuRahuYP" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusuRahuYPSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusuRahuYPResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusuRahuYP_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusuRahuYP_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusuRahuYP_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusuRahuYP_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusKRHypSoSoSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusKRHypSoSo" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusKRHypSoSoSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusKRHypSoSoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusKRHypSoSo_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusKRHypSoSo_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusKRHypSoSo_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusKRHypSoSo_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusRRASoSoSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusRRASoSo" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusRRASoSoSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusRRASoSoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusHRypSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusHRyp" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanKayttoOikeusHRypSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanKayttoOikeusHRypResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanRoolinOikeusHRypSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanRoolinOikeusHRyp" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanRoolinOikeusHRypSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanRoolinOikeusHRypResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanTiedotADstaSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanTiedotADsta" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanTiedotADstaSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanTiedotADstaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanTiedotADsta_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanTiedotADsta_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanTiedotADsta_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanTiedotADsta_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanPerustiedotSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanPerustiedot" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanPerustiedotSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanPerustiedotResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanPerustiedot_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanPerustiedot_v2" />
+  </wsdl:message>
+  <wsdl:message name="HaeKayttajanPerustiedot_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:HaeKayttajanPerustiedot_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="TarkistaSalasanaTilaus2SoapIn">
+    <wsdl:part name="parameters" element="tns:TarkistaSalasanaTilaus2" />
+  </wsdl:message>
+  <wsdl:message name="TarkistaSalasanaTilaus2SoapOut">
+    <wsdl:part name="parameters" element="tns:TarkistaSalasanaTilaus2Response" />
+  </wsdl:message>
+  <wsdl:message name="TarkistaSalasanaTilausSoapIn">
+    <wsdl:part name="parameters" element="tns:TarkistaSalasanaTilaus" />
+  </wsdl:message>
+  <wsdl:message name="TarkistaSalasanaTilausSoapOut">
+    <wsdl:part name="parameters" element="tns:TarkistaSalasanaTilausResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeTurvakysymysJaVastausSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeTurvakysymysJaVastaus" />
+  </wsdl:message>
+  <wsdl:message name="HaeTurvakysymysJaVastausSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeTurvakysymysJaVastausResponse" />
+  </wsdl:message>
+  <wsdl:message name="LisaaSalasanaTilausSoapIn">
+    <wsdl:part name="parameters" element="tns:LisaaSalasanaTilaus" />
+  </wsdl:message>
+  <wsdl:message name="LisaaSalasanaTilausSoapOut">
+    <wsdl:part name="parameters" element="tns:LisaaSalasanaTilausResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaVahvistusSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaVahvistus" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaVahvistusSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaVahvistusResponse" />
+  </wsdl:message>
+  <wsdl:message name="PaivitaSalasanaVahvistusSoapIn">
+    <wsdl:part name="parameters" element="tns:PaivitaSalasanaVahvistus" />
+  </wsdl:message>
+  <wsdl:message name="PaivitaSalasanaVahvistusSoapOut">
+    <wsdl:part name="parameters" element="tns:PaivitaSalasanaVahvistusResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaTilausLukumaaraSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaTilausLukumaara" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaTilausLukumaaraSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaTilausLukumaaraResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaTilausLukumaaraAikaRajauksellaSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaTilausLukumaaraAikaRajauksella" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaTilausLukumaaraAikaRajauksellaSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaTilausLukumaaraAikaRajauksellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaTilausSamaIPPyyntoLKMSoapIn">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaTilausSamaIPPyyntoLKM" />
+  </wsdl:message>
+  <wsdl:message name="HaeSalasanaTilausSamaIPPyyntoLKMSoapOut">
+    <wsdl:part name="parameters" element="tns:HaeSalasanaTilausSamaIPPyyntoLKMResponse" />
+  </wsdl:message>
+  <wsdl:message name="LisaaTodistuksenTiedotSoapIn">
+    <wsdl:part name="parameters" element="tns:LisaaTodistuksenTiedot" />
+  </wsdl:message>
+  <wsdl:message name="LisaaTodistuksenTiedotSoapOut">
+    <wsdl:part name="parameters" element="tns:LisaaTodistuksenTiedotResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SQLServiceTASoap">
+    <wsdl:operation name="HaeKayttajanKayttoOikeusSoSo">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusSoSoSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusSoSoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusSoSo_v2">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusSoSo_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusSoSo_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusYP">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusYPSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusYPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusYP_v2">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusYP_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusYP_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusMuuviYP">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusMuuviYPSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusMuuviYPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusMuuviYP_v2">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusMuuviYP_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusMuuviYP_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanRoolinOikeusuRahuYP">
+      <wsdl:input message="tns:HaeKayttajanRoolinOikeusuRahuYPSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanRoolinOikeusuRahuYPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusuRahuYP">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusuRahuYPSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusuRahuYPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusuRahuYP_v2">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusuRahuYP_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusuRahuYP_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusKRHypSoSo">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusKRHypSoSoSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusKRHypSoSoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusKRHypSoSo_v2">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusKRHypSoSo_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusKRHypSoSo_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusRRASoSo">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusRRASoSoSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusRRASoSoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusHRyp">
+      <wsdl:input message="tns:HaeKayttajanKayttoOikeusHRypSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanKayttoOikeusHRypSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanRoolinOikeusHRyp">
+      <wsdl:input message="tns:HaeKayttajanRoolinOikeusHRypSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanRoolinOikeusHRypSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanTiedotADsta">
+      <wsdl:input message="tns:HaeKayttajanTiedotADstaSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanTiedotADstaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanTiedotADsta_v2">
+      <wsdl:input message="tns:HaeKayttajanTiedotADsta_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanTiedotADsta_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanPerustiedot">
+      <wsdl:input message="tns:HaeKayttajanPerustiedotSoapIn" />
+      <wsdl:output message="tns:HaeKayttajanPerustiedotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanPerustiedot_v2">
+      <wsdl:input message="tns:HaeKayttajanPerustiedot_v2SoapIn" />
+      <wsdl:output message="tns:HaeKayttajanPerustiedot_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TarkistaSalasanaTilaus2">
+      <wsdl:input message="tns:TarkistaSalasanaTilaus2SoapIn" />
+      <wsdl:output message="tns:TarkistaSalasanaTilaus2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TarkistaSalasanaTilaus">
+      <wsdl:input message="tns:TarkistaSalasanaTilausSoapIn" />
+      <wsdl:output message="tns:TarkistaSalasanaTilausSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeTurvakysymysJaVastaus">
+      <wsdl:input message="tns:HaeTurvakysymysJaVastausSoapIn" />
+      <wsdl:output message="tns:HaeTurvakysymysJaVastausSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LisaaSalasanaTilaus">
+      <wsdl:input message="tns:LisaaSalasanaTilausSoapIn" />
+      <wsdl:output message="tns:LisaaSalasanaTilausSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaVahvistus">
+      <wsdl:input message="tns:HaeSalasanaVahvistusSoapIn" />
+      <wsdl:output message="tns:HaeSalasanaVahvistusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaivitaSalasanaVahvistus">
+      <wsdl:input message="tns:PaivitaSalasanaVahvistusSoapIn" />
+      <wsdl:output message="tns:PaivitaSalasanaVahvistusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausLukumaara">
+      <wsdl:input message="tns:HaeSalasanaTilausLukumaaraSoapIn" />
+      <wsdl:output message="tns:HaeSalasanaTilausLukumaaraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausLukumaaraAikaRajauksella">
+      <wsdl:input message="tns:HaeSalasanaTilausLukumaaraAikaRajauksellaSoapIn" />
+      <wsdl:output message="tns:HaeSalasanaTilausLukumaaraAikaRajauksellaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausSamaIPPyyntoLKM">
+      <wsdl:input message="tns:HaeSalasanaTilausSamaIPPyyntoLKMSoapIn" />
+      <wsdl:output message="tns:HaeSalasanaTilausSamaIPPyyntoLKMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LisaaTodistuksenTiedot">
+      <wsdl:input message="tns:LisaaTodistuksenTiedotSoapIn" />
+      <wsdl:output message="tns:LisaaTodistuksenTiedotSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SQLServiceTASoap" type="tns:SQLServiceTASoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HaeKayttajanKayttoOikeusSoSo">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusSoSo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusSoSo_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusSoSo_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusYP">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusYP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusYP_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusYP_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusMuuviYP">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusMuuviYP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusMuuviYP_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusMuuviYP_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanRoolinOikeusuRahuYP">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanRoolinOikeusuRahuYP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusuRahuYP">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusuRahuYP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusuRahuYP_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusuRahuYP_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusKRHypSoSo">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusKRHypSoSo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusKRHypSoSo_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusKRHypSoSo_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusRRASoSo">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusRRASoSo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusHRyp">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusHRyp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanRoolinOikeusHRyp">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanRoolinOikeusHRyp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanTiedotADsta">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanTiedotADsta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanTiedotADsta_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanTiedotADsta_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanPerustiedot">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanPerustiedot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanPerustiedot_v2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanPerustiedot_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TarkistaSalasanaTilaus2">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/TarkistaSalasanaTilaus2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TarkistaSalasanaTilaus">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/TarkistaSalasanaTilaus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeTurvakysymysJaVastaus">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeTurvakysymysJaVastaus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisaaSalasanaTilaus">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/LisaaSalasanaTilaus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaVahvistus">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaVahvistus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaivitaSalasanaVahvistus">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/PaivitaSalasanaVahvistus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausLukumaara">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaTilausLukumaara" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausLukumaaraAikaRajauksella">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaTilausLukumaaraAikaRajauksella" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausSamaIPPyyntoLKM">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaTilausSamaIPPyyntoLKM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisaaTodistuksenTiedot">
+      <soap:operation soapAction="http://hallinta.vtjkysely.vrk.fi/LisaaTodistuksenTiedot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SQLServiceTASoap12" type="tns:SQLServiceTASoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HaeKayttajanKayttoOikeusSoSo">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusSoSo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusSoSo_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusSoSo_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusYP">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusYP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusYP_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusYP_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusMuuviYP">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusMuuviYP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusMuuviYP_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusMuuviYP_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanRoolinOikeusuRahuYP">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanRoolinOikeusuRahuYP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusuRahuYP">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusuRahuYP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusuRahuYP_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusuRahuYP_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusKRHypSoSo">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusKRHypSoSo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusKRHypSoSo_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusKRHypSoSo_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusRRASoSo">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusRRASoSo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanKayttoOikeusHRyp">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanKayttoOikeusHRyp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanRoolinOikeusHRyp">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanRoolinOikeusHRyp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanTiedotADsta">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanTiedotADsta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanTiedotADsta_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanTiedotADsta_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanPerustiedot">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanPerustiedot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeKayttajanPerustiedot_v2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeKayttajanPerustiedot_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TarkistaSalasanaTilaus2">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/TarkistaSalasanaTilaus2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TarkistaSalasanaTilaus">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/TarkistaSalasanaTilaus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeTurvakysymysJaVastaus">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeTurvakysymysJaVastaus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisaaSalasanaTilaus">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/LisaaSalasanaTilaus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaVahvistus">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaVahvistus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaivitaSalasanaVahvistus">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/PaivitaSalasanaVahvistus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausLukumaara">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaTilausLukumaara" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausLukumaaraAikaRajauksella">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaTilausLukumaaraAikaRajauksella" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaeSalasanaTilausSamaIPPyyntoLKM">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/HaeSalasanaTilausSamaIPPyyntoLKM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LisaaTodistuksenTiedot">
+      <soap12:operation soapAction="http://hallinta.vtjkysely.vrk.fi/LisaaTodistuksenTiedot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SQLServiceTA">
+    <wsdl:port name="SQLServiceTASoap" binding="tns:SQLServiceTASoap">
+      <soap:address location="http://localhost:5050/SQLServiceTA.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SQLServiceTASoap12" binding="tns:SQLServiceTASoap12">
+      <soap12:address location="http://localhost:5050/SQLServiceTA.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

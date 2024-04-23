@@ -30,7 +30,7 @@ TodistusToPdf
  - VTJUtilWebSite\App_Code\TodistusToPdf.cs
  -  VTJUtilWebSite\App_Code\Todistus.cs
 
-## Copying and License
+## Copyright and License
 
 This material is copyright (c) 2007-2024 The Finnish Digital Agency
 

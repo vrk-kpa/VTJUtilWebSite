@@ -7,24 +7,28 @@ Utility application for creating .pdf -files.
 Fill out the (AcroForm) fields in an existing pdf document:
 
 AETToPdf
-•	VTJUtilWebSite\App_Code\AETToPdf.cs
-•	VTJUtilWebSite\App_Code\Luokat.cs
+
+ - VTJUtilWebSite\App_Code\AETToPdf.cs
+ - VTJUtilWebSite\App_Code\Luokat.cs
 
 ApostilleToPdf, TodistusToPdf
-•	VTJUtilWebSite\App_Code\ApostilleToPdf.cs
-•	VTJUtilWebSite\App_Code\Apostille.cs
-•	VTJUtilWebSite\App_Code\TodistusToVakiolomake.cs
-•	VTJUtilWebSite\App_Code\Todistus.cs
+
+ - VTJUtilWebSite\App_Code\ApostilleToPdf.cs
+ - VTJUtilWebSite\App_Code\Apostille.cs
+ - VTJUtilWebSite\App_Code\TodistusToVakiolomake.cs
+ - VTJUtilWebSite\App_Code\Todistus.cs
 
 Create a new pdf document from scratch:
 
 OteToPdf
-•	VTJUtilWebSite\App_Code\OteToPdf.cs
-•	VTJUtilWebSite\App_Code\Ote.cs
+
+ - VTJUtilWebSite\App_Code\OteToPdf.cs
+ -  VTJUtilWebSite\App_Code\Ote.cs
 
 TodistusToPdf
-•	VTJUtilWebSite\App_Code\TodistusToPdf.cs
-•	VTJUtilWebSite\App_Code\Todistus.cs
+
+ - VTJUtilWebSite\App_Code\TodistusToPdf.cs
+ -  VTJUtilWebSite\App_Code\Todistus.cs
 
 ## Copying and License
 

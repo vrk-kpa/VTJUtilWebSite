@@ -36,4 +36,4 @@ This material is copyright (c) 2007-2024 The Finnish Digital Agency
 
 Application uses [iTextsharp.dll (5.5)](https://github.com/itext/itextsharp) and it is licensed under the GNU Affero General Public License (AGPL) v3.0 whose full text may be found at: https://www.gnu.org/licenses/agpl-3.0.html
 
-All other content in this repository is also licensed under GNU Affero General Public License (AGPL) v3.0  unless otherwise specified.
+All other content in this repository is also licensed under [AGPL v.3 License](https://github.com/vrk-kpa/VTJUtilWebSite/tree/main?tab=AGPL-3.0-1-ov-file)  unless otherwise specified.
